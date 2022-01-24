@@ -29,6 +29,7 @@
         font-family: 'Titillium Web', sans-serif;
         font-size: 4.2rem;
         font-weight: 700;
+        line-height: 1.4;
         text-align: center;
         width: 46%;
     }
@@ -64,7 +65,7 @@
     width: 100%;
 }
 .sticky + .main-content {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 // .sticky + .nav-hamburger {
 //     margin-top: 90px;

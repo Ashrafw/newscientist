@@ -32,13 +32,18 @@ var sticky1 = hamNav.offsetTop;
 function myFunction() {
     if (window.pageYOffset >= sticky && window.innerWidth > 980) {
         navbar.classList.add('sticky');
+        hamNav.classList.remove('sticky1');
     } else if (window.pageYOffset < sticky && window.innerWidth > 980) {
         navbar.classList.remove('sticky');
+        hamNav.classList.remove('sticky1');
     }
     if (window.pageYOffset >= sticky1 && window.innerWidth < 981) {
-        hamNav.classList.add('sticky');
-    } else if (window.pageYOffset < sticky) {
-        hamNav.classList.remove('sticky');
+        hamNav.classList.add('sticky1');
+        navbar.classList.remove('sticky');
+    } else if (window.pageYOffset < sticky1 && window.innerWidth < 981) {
+        navbar.classList.remove('sticky');
+
+        hamNav.classList.remove('sticky1');
     }
 }
 hamMenu.addEventListener('click', (e) => {
