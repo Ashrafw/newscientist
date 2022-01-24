@@ -32,13 +32,11 @@ var sticky1 = hamNav.offsetTop;
 function myFunction() {
     if (window.pageYOffset >= sticky && window.innerWidth > 980) {
         navbar.classList.add('sticky');
-        hamNav.classList.remove('sticky');
     } else if (window.pageYOffset < sticky && window.innerWidth > 980) {
         navbar.classList.remove('sticky');
     }
     if (window.pageYOffset >= sticky1 && window.innerWidth < 981) {
         hamNav.classList.add('sticky');
-        navbar.classList.remove('sticky');
     } else if (window.pageYOffset < sticky) {
         hamNav.classList.remove('sticky');
     }
