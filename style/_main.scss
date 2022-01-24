@@ -1,0 +1,203 @@
+.main-content {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 5fr 2fr;
+    font-family: 'Titillium Web', sans-serif;
+    z-index: 1;
+    .main-content-left {
+        .main-content-sec {
+            margin: 20px 0 30px;
+            h2 {
+                font-family: 'Titillium Web', sans-serif;
+                font-weight: 400;
+                margin-bottom: 5px;
+            }
+            .next-div {
+                width: 100%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                a {
+                    text-decoration: none;
+                    color: rgb(39, 39, 39);
+
+                    .next {
+                        // width: fit-content;
+                        // text-align: right;
+                        padding-top: 12px;
+                        padding-right: 12px;
+                        font-size: 1.2rem;
+                        font-weight: 100;
+                        cursor: pointer;
+                        i {
+                            // font-weight: 500;
+                            font-size: 1.2rem;
+                            padding-left: 4px;
+                        }
+                        &:hover {
+                            color: #00b3e5;
+                        }
+                    }
+                }
+            }
+
+            .main-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 20px;
+                z-index: -101;
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    // height: 240px;
+                    // width: 250px;
+                    width: 100%;
+                    overflow: hidden;
+                    cursor: pointer;
+                    .image {
+                        overflow: hidden;
+                        width: 100%;
+                        // height: 140px;
+                        margin-bottom: 5px;
+                        img {
+                            width: 100%;
+                            margin-left: auto;
+                            margin-right: auto;
+                            display: block;
+                            // height: 140px;
+                            transition: all 0.6s ease-in-out;
+                        }
+                    }
+                    position: relative;
+                    h4 {
+                        font-family: 'Titillium Web', sans-serif;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 1px 8px;
+                        color: aliceblue;
+                        background-color: rgb(7, 107, 74);
+                        font-weight: 600;
+                        font-size: 1rem;
+                    }
+                    h3 {
+                        font-size: 1.4rem;
+                        line-height: 1.2;
+                        font-weight: 700;
+                        background-color: inherit;
+                    }
+                    &:hover {
+                        img {
+                            transform: scale(1.1);
+                        }
+
+                        h3 {
+                            color: #00b3e5;
+                        }
+                    }
+                    .health {
+                        background-color: #20bc9e;
+                    }
+                    .mind {
+                        background-color: #79227d;
+                    }
+                    .tech {
+                        background-color: #548293;
+                    }
+                    .enviroment {
+                        background-color: #bc9617;
+                    }
+                    .space {
+                        background-color: #272a27;
+                    }
+                }
+            }
+        }
+    }
+    .main-content-right {
+        // background-color: rgb(180, 180, 180);
+        .advert {
+            height: 500px;
+            width: 100%;
+            background-color: rgb(255, 162, 162);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h2 {
+                text-align: center;
+                padding: 20px;
+                font-size: 1.8rem;
+            }
+            margin: 20px 0;
+        }
+        .articles {
+            .article-links {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-gap: 3px;
+                a {
+                    text-align: center;
+                    padding: 5px 5px;
+                    text-decoration: none;
+                    background-color: rgb(233, 233, 233);
+                    color: #231f20be;
+                    font-weight: 700;
+
+                    &:hover {
+                        color: #00b3e5;
+                    }
+                }
+                & .selected {
+                    background-color: #00b3e5;
+                    color: whitesmoke;
+                    &:hover {
+                        background-color: #00b3e5;
+                        color: whitesmoke;
+                    }
+                }
+            }
+            .article-titles {
+                .trending,
+                .latest,
+                .video,
+                .free {
+                    display: none;
+                }
+                .trending.show,
+                .latest.show,
+                .video.show,
+                .free.show {
+                    display: grid;
+                    grid-template-rows: 1fr 1fr 1fr 1fr;
+                    grid-gap: 3px;
+                    margin-top: 3px;
+                    // background-color: rgb(211, 211, 211);
+
+                    .article-title {
+                        background-color: rgb(233, 233, 233);
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 12px 10px;
+                        h3 {
+                            color: #231f20be;
+                            font-size: 1.3rem;
+                            line-height: 1.3;
+                            cursor: pointer;
+                            &:hover {
+                                color: #00b3e5;
+                            }
+                        }
+                        h2 {
+                            font-size: 2rem;
+                            color: #00b3e5;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
